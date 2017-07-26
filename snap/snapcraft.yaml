@@ -1,0 +1,19 @@
+name: pypy3
+version: '5.8.0'
+summary: PyPy is a fast, compliant alternative implementation of the Python language
+description: |
+  PyPy is a replacement for CPython. It is built using the RPython language
+  that was co-developed with it. The main reason to use it instead of CPython
+  is speed; it runs generally faster.
+
+grade: stable
+confinement: classic
+
+apps:
+  pypy3:
+    command: bin/pypy3
+
+parts:
+  pypy3:
+    plugin: dump
+    source: https://bitbucket.org/pypy/pypy/downloads/pypy3-v5.8.0-linux64.tar.bz2
